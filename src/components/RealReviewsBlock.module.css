@@ -1,0 +1,80 @@
+.realReviewsSection {
+  background: #fff;
+  padding: 32px 0 0 0;
+  margin-bottom: 48px;
+}
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+.textCol {
+  flex: 1 1 0;
+  min-width: 260px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.desc {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 0;max-width: 602px;
+}
+.desc b {
+  font-weight: 700;
+  color: #000;
+}
+.desc a {
+  color: #007bce;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.logoCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 180px;
+  gap: 4px;
+  margin-left: auto;
+}
+.logo {
+  height: 44px;
+  margin-bottom: 4px;
+}
+
+.screenshotRow {
+  width: 100%;
+  min-height: 220px;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.screenshotPlaceholder {
+  width: 100%;
+  min-height: 220px;
+  background: #ededed;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bold {
+  font-weight: 700;
+  color: #000;
+}
+.gray {
+  color: #999;
+  font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  .topRow {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

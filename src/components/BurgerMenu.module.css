@@ -1,0 +1,84 @@
+.burgerWrapper {
+  position: relative;
+  z-index: 100;
+}
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 110;
+}
+.line, .lineOpen {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #222;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.menu {
+  display: none;
+}
+.menu.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+  gap: 18px;
+  z-index: 120;
+  animation: slideIn 0.25s;
+}
+.menu a {
+  font-size: 1.2rem;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.langSwitcher {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.lang, .langActive {
+  background: none;
+  border: 1px solid #b89f5a;
+  color: #b89f5a;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.langActive {
+  background: #b89f5a;
+  color: #fff;
+}
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 115;
+}
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+  }
+}
+@keyframes slideIn {
+  from { right: -320px; opacity: 0; }
+  to { right: 0; opacity: 1; }
+}

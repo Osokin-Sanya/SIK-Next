@@ -1,0 +1,224 @@
+.stepperSection {
+  width: 100%;
+  margin: 52px 0 0 0;
+  padding: 0;
+}
+.stepperHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 70px;
+}
+.stepperTitle {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+.meetingBtn {
+  background: #ededed;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  margin-top: 2px;
+  transition: background 0.18s;
+}
+.meetingBtn:hover {
+  background: #e0e0e0;
+}
+.stepperDescRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.13rem;
+  margin: 100px 0;
+  margin-top: 0;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+.gray {
+  color: #888;
+  font-weight: 400;
+}
+.stepperWrap {
+  width: 100%;
+  position: relative;
+  padding-bottom: 32px;
+}
+.stepperLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 38px;
+  height: 2px;
+  background: #ededed;
+  z-index: 0;
+}
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  cursor: pointer;
+  transition: color 0.18s, background 0.18s;
+}
+.circle {
+  width: 36px;
+  height: 36px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 12px;
+  margin-top: 0;
+  border: 2px solid #e5e5e5;
+}
+.stepTitle {
+  margin-bottom: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+.stepDesc {
+  color: #888;
+  font-size: 0.98rem;
+  text-align: center;
+  max-width: 180px;
+  min-height: 38px;
+  font-weight: 400;
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s,
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.stepBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+}
+.opened .circle {
+  background: #fff;
+  color: #222;
+  border: 2px solid #bbb;
+}
+.opened .stepTitle {
+  color: #222;
+  font-weight: 700;
+}
+.opened .stepDesc {
+  color: #222;
+  opacity: 1;
+  max-height: 200px;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.closed .circle {
+  background: #e5e5e5;
+  color: #bbb;
+  border: 2px solid #e5e5e5;
+}
+.closed .stepTitle {
+  color: #bbb;
+  font-weight: 600;
+}
+.closed .stepDesc {
+  color: #bbb;
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  transition: opacity 0.18s;
+}
+@media (max-width: 900px) {
+  .stepperHeaderRow {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .stepperTitle {
+    font-size: 1.3rem;
+  }
+  .meetingBtn {
+    font-size: 0.97rem;
+    padding: 8px 16px;
+  }
+  .stepperDescRow {
+    font-size: 1.01rem;
+    margin-bottom: 18px;
+  }
+  .steps {
+    gap: 2px;
+  }
+  .step {
+    width: 19%;
+  }
+  .circle {
+    width: 30px;
+    height: 30px;
+    font-size: 1.05rem;
+  }
+  .stepTitle {
+    font-size: 1.01rem;
+  }
+  .stepDesc {
+    font-size: 0.89rem;
+    max-width: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .stepperHeaderRow {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .stepBlock {
+    flex-direction: row;
+  }
+  .stepperDescRow {
+    font-size: 0.97rem;
+    margin-bottom: 10px;
+  }
+  .steps {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .stepperLine {
+    display: none;
+  }
+  .step {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .circle {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .stepTitle,
+  .stepDesc {
+    text-align: left;
+  }
+}

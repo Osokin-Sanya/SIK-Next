@@ -1,0 +1,129 @@
+.contactSection {
+  background: #fff;
+  padding: 40px 0 32px 0;
+  margin-bottom: 48px;
+}
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+.subtitle {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 28px;
+  color: #222;
+}
+.subtitle b {
+  font-weight: 700;
+  color: #000;
+}
+.form {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.row {
+  display: flex;
+  gap: 18px;
+}
+.input {
+  flex: 1 1 0;
+  padding: 15px 14px;
+  font-size: 1.05rem;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: #fafafa;
+  outline: none;
+  transition: border 0.2s;
+}
+.input:focus {
+  border: 1.5px solid #aaa;
+}
+.textarea {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  padding: 15px 14px;
+  font-size: 1.05rem;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: #fafafa;
+  outline: none;
+  transition: border 0.2s;
+}
+.textarea:focus {
+  border: 1.5px solid #aaa;
+}
+.btnRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+.submitBtn {
+  background: #bbb;
+  color: #111;
+  font-size: 1.13rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 13px 38px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submitBtn:hover {
+  background: #999;
+}
+
+@media (max-width: 900px) {
+  .form {
+    max-width: 98vw;
+    gap: 12px;
+  }
+  .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .input {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .textarea {
+    font-size: 1rem;
+    min-height: 70px;
+  }
+  .btnRow {
+    margin-top: 4px;
+  }
+}
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 18px 0 12px 0;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .form {
+    gap: 8px;
+  }
+  .input {
+    padding: 11px 9px;
+    font-size: 0.96rem;
+  }
+  .textarea {
+    padding: 11px 9px;
+    font-size: 0.96rem;
+    min-height: 48px;
+  }
+  .submitBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
